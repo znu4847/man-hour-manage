@@ -1,0 +1,38 @@
+This project is a reproduction of the project I worked on in the field.
+I started to improve my development skills by learning about vue and thinking about things I couldn't try.
+
+This system allows you to manage project time on site by project. The system is divided into three main functions. First of all, you can search for projects inside the company.
+When you join a new project, you can find it by searching the project in this search screen.
+Next is the ability to manage your own projects. You can add projects you searched for earlier, delete projects you no longer join, etc.
+Lastly, it is a table function that manages the time worked by project, task classification and day.
+It checks the input time by daily, weekly and monthly, and has some input check function.
+
+The key and most time-consuming feature of this project is the last table feature.
+Responsive programmatic work was performed to separate and separate separate data by day and species, and to reflect changes in real time.
+Also, to clarify the data and logic, all data is processed using javascript class.
+In the single file component of vue.js, I only care about the layout and layout of the data.
+
+Although there are some detailed requirements and environment differences from the actual project, I will keep the main functions and development ideas.
+In terms of functionality, I will work without any limitations associated with site-specific information, authentication, work-flow function, common-api, and the use of existing databases.
+The main difference in the environment is the difference between vuetify's version (1.5-> 2.0) and rest-api (spring-boot / oracle-> node.js / mongoDb).
+
+---------------------------------------------------------------------------------------------------------------------
+
+이 프로젝트는 내가 현장에서 작업했던 프로젝트의 재현작입니다. 
+vue에 대한 학습 및 미처 시도하지 못 했던 부분에 대해 되새겨보면서 개발능력을 향상하고자 시작했습니다.
+
+이 시스템은 현장에서의 근무시간을 프로젝트별로 관리할 수 있도록 합니다. 이 시스템의 기능은 크게 3가지로 나뉩니다. 우선 회사 내부의 프로젝트를 검색하는 기능입니다. 
+자신이 새로운 프로젝트에 참여할 시, 이 검색화면에서 해당 프로젝트를 검색하여 찾을 수 있습니다.
+그 다음으로는 자신의 프로젝트를 관리하는 기능입니다. 앞에서 검색한 프로젝트를 추가하거나, 더 이상 참가하지 않는 프로젝트를 삭제하는 등의 기능이 있습니다. 
+마지막으로 자신이 근무한 시간을 프로젝트, 작업 분류, 일별로 입력하여 관리하는 테이블 기능입니다. 
+입력한 시간을 일별, 주별, 월별로 종합하여 확인시켜주며 몇 가지 입력 체크 기능을 가지고 있습니다.
+
+이 프로젝트에서 가장 핵심 기능이자 가장 많은 시간이 소모된 기능은 마지막의 테이블 기능입니다. 
+별도로 분리된 데이터를 일별, 종별로 구분하여 종합하기 위해, 그리고 실시간으로 변동 사항을 반영하기 위해 반응형 프로그래밍 방식으로 작업하였습니다. 
+또한 데이터와 로직을 명확히 하기 위해 모든 데이터는 javascript의 class를 이용하여 처리합니다. 
+vue.js의 single file component에서는 레이아웃과 데이터의 배치에만 신경을 쓸 수 있도록 했습니다.
+
+실제 작업했던 프로젝트와 몇 가지 세세한 요구사항과 환경의 차이는 있으나 주요 기능과 개발 사상은 유지할 예정입니다.
+기능에 있어 현장과 관련된 정보, 인증 기능, work-flow 및 기존 데이터베이스 활용에 따른 제약은 제외하고 작업 할 것입니다.
+환경에 있어 주요 차이점은 vuetify의 버전(1.5 -> 2.0)과 rest-api(spring-boot/oracle -> node.js/mongoDb)의 차이가 있습니다.
+
