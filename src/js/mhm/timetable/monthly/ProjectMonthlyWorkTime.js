@@ -2,9 +2,18 @@ import ProjectDailyWorkTime from "@/js/mhm/timetable/daily/ProjectDailyWorkTime"
 
 export default class ProjectMonthlyWorkTime {
   constructor(projectData) {
-    console.log("pjr mnt const");
-    console.log(projectData);
     this.projectData = projectData;
+    if (
+      projectData.dailyWorkTimeList === null ||
+      projectData.dailyWorkTimeList === undefined
+    )
+      projectData.dailyWorkTimeList = [];
+    if (!projectData.projectName) projectData.projectName = "";
+    if (!projectData.projectCd) projectData.projectCd = "";
+  }
+
+  get projectCd() {
+    return this.projectData.projectCd;
   }
 
   get header() {
@@ -14,7 +23,7 @@ export default class ProjectMonthlyWorkTime {
     };
   }
 
-  get dailyTimeList() {
+  get dailyWorkTimeList() {
     let list = [];
     this.projectData.dailyTimeList.forEach(row =>
       list.push(new ProjectDailyWorkTime(row))

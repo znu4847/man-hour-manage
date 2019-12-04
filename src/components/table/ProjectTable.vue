@@ -1,3 +1,5 @@
+/* eslint-disable vue/require-default-prop */ /* eslint-disable
+vue/require-default-prop */
 <template>
   <table>
     <thead>
@@ -16,7 +18,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(dailyData, idx) of dailyTimeList" :key="idx">
+      <tr
+        v-for="(dailyData, idx) of dailyWorkTimeList"
+        :key="idx"
+      >
         <td>{{ dailyData.work1Str }}</td>
         <td>{{ dailyData.work2Str }}</td>
         <td>{{ dailyData.work3Str }}</td>
@@ -30,15 +35,18 @@ import MockData from "@/js/mock/ProjectTableData";
 import ProjectMonthlyWorkTime from "@/js/mhm/timetable/monthly/ProjectMonthlyWorkTime.js";
 
 export default {
+  props: {
+    projectData: {
+      type: Object,
+      default: new ProjectMonthlyWorkTime({})
+    }
+  },
   data: () => ({
     restProjectData: {}
   }),
   computed: {
-    projectData() {
-      return new ProjectMonthlyWorkTime(this.restProjectData);
-    },
-    dailyTimeList() {
-      return this.projectData.dailyTimeList;
+    dailyWorkTimeList() {
+      return this.projectData.dailyWorkTimeList;
     },
     header() {
       return this.projectData.header;
